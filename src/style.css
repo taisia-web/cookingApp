@@ -34,7 +34,7 @@ nav{
     padding: 0 20px;
     margin: 15px 0;
 }
-li{
+nav li{
     width: 10vw;
     font-weight: 700;
     user-select: none;
@@ -47,7 +47,7 @@ li{
     transition: 0.5s;
 }
 
-li:hover{
+nav li:hover{
     transform: scale(1.1);
 }
 
