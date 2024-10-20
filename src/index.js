@@ -7,8 +7,13 @@ const recipes = document.querySelector('.recipes');
 const renderRecipes = (recipe) => {
     recipe.forEach(i => {
         const div = document.createElement('div');
+        const img = document.createElement('img');
+        const name = document.createElement('span');
+        name.textContent = i.name;
+        div.append(name);
+        img.setAttribute('src', i.image);
+        div.append(img);
         div.classList.add('recipe');
-        div.textContent = i.name;
         recipes.append(div);
     });
 }
@@ -16,7 +21,7 @@ const renderRecipes = (recipe) => {
 input.addEventListener('input', (e) => {
     recipes.innerHTML = '';
     const search = e.target.value;
-    const data = RECIPES.filter(i => i.name.toLowerCase().startsWith(search));
+    const data = RECIPES.filter(i => i.name.toLowerCase().startsWith(search.toLowerCase()));
     renderRecipes(data)
 });
 
