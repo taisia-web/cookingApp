@@ -1,20 +1,20 @@
 import './style.css';
 import RECIPES from './recipes.js';
+import createReceipe from './components.js';
+import createModal from './window.js';
 
 const input = document.querySelector('input');
 const recipes = document.querySelector('.recipes');
+const body = document.querySelector('body');
 
-const renderRecipes = (recipe) => {
-    recipe.forEach(i => {
-        const div = document.createElement('div');
-        const img = document.createElement('img');
-        const name = document.createElement('span');
-        name.textContent = i.name;
-        div.append(name);
-        img.setAttribute('src', i.image);
-        div.append(img);
-        div.classList.add('recipe');
-        recipes.append(div);
+const renderRecipes = (recipesData) => {
+    recipesData.forEach(recipe => {
+        const componentRecipe = createReceipe(recipe);
+        recipes.append(componentRecipe);
+        componentRecipe.addEventListener('click', () => {
+            const modal = createModal(recipe);
+            body.append(modal);
+        })
     });
 }
 
