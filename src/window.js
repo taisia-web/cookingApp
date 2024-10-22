@@ -9,11 +9,23 @@ const createModal = (recipe) => {
     closeButton.textContent = 'Close';
     closeButton.addEventListener('click', () => {
         overlay.remove();
-    })
+    });
+    const ingredients = createIngredients(recipe.ingredients);
     overlay.append(content);
     content.append(span);
     content.append(closeButton);
+    content.append(ingredients);
     return overlay;
+}
+
+const createIngredients = (ingr) => {
+  const ul = document.createElement('ul');
+  ingr.forEach(i => {
+    const li = document.createElement('li');
+    li.textContent = i;
+    ul.append(li);
+  })
+  return ul;
 }
 
 export default createModal;
