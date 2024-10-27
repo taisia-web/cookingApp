@@ -34,7 +34,7 @@ nav{
     padding: 0 30px;
     margin: 30px 0;
 }
-li{
+nav li{
     width: 10vw;
     font-weight: 700;
     user-select: none;
@@ -47,7 +47,7 @@ li{
     transition: 0.5s;
 }
 
-li:hover{
+nav li:hover{
     transform: scale(1.1);
 }
 
@@ -90,7 +90,7 @@ li:hover{
     background-color: rgb(255, 174, 53);
     border-radius: 15px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 20px;
 }
 .modal-content button{
@@ -99,4 +99,14 @@ li:hover{
     background-color: white;
     border: none;
     border-radius: 5px;
+}
+.header-modal{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.list-ingr{
+    list-style: none;
+    font-weight: 700;
+    font-size: 15px;
 }
