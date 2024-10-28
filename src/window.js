@@ -6,9 +6,13 @@ const createModal = (recipe) => {
   
   const headerModal = document.createElement('div');
   headerModal.classList.add('header-modal');
+  const mainModal = document.createElement('div');
+  mainModal.classList.add('main-modal');
   const closeButton = document.createElement('button');
   const span = document.createElement('span');
   span.textContent = recipe.name;
+  const img = document.createElement('img');
+  img.setAttribute('src', recipe.image);
 
   closeButton.textContent = 'Close';
   closeButton.addEventListener('click', () => {
@@ -24,12 +28,14 @@ const createModal = (recipe) => {
 
   headerModal.append(span);
   headerModal.append(closeButton);
+  mainModal.append(img);
   
 
   const ingredients = createIngredients(recipe.ingredients);
+  mainModal.append(ingredients);
   overlay.append(content);
   content.append(headerModal);
-  content.append(ingredients);
+  content.append(mainModal);
   return overlay;
 }
 

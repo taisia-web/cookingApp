@@ -93,6 +93,10 @@ nav li:hover{
     flex-direction: column;
     padding: 20px;
 }
+.modal-content img{
+    height: 30vw;
+    border-radius: 20px;
+}
 .modal-content button{
     height: 30px;
     width: 50px;
@@ -109,4 +113,8 @@ nav li:hover{
     list-style: none;
     font-weight: 700;
     font-size: 15px;
+}
+.main-modal{
+    display: flex;
+    justify-content: space-evenly;
 }
