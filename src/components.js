@@ -1,3 +1,5 @@
+import anime from 'animejs/lib/anime.es.js';
+
 const createReceipe = (data) =>{
     const div = document.createElement('div');
     const img = document.createElement('img');
