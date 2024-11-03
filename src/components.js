@@ -9,7 +9,15 @@ const createReceipe = (data) =>{
     img.setAttribute('src', data.image);
     div.append(img);
     div.classList.add('recipe');
+    anime({
+        targets: div,
+        opacity:1,
+        easing:'linear',
+        duration:500
+    });
     return div;
 }
+
+
 
 export default createReceipe;
