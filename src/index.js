@@ -43,6 +43,9 @@ nav.addEventListener('click', (e) => {
     const data = e.target.dataset.type;
     searchRecipes(data, true);
   }
+  if (e.target.dataset.item ==='all'){
+    renderRecipes(RECIPES);
+  }
 })
 
 

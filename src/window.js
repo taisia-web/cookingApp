@@ -14,7 +14,7 @@ const createModal = (recipe) => {
   const img = document.createElement('img');
   img.setAttribute('src', recipe.image);
 
-  closeButton.textContent = 'Close';
+  closeButton.textContent = 'X';
   closeButton.addEventListener('click', () => {
       overlay.remove();
   });
